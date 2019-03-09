@@ -87,15 +87,14 @@ public class IfChainInList {
             right = right.next;
         }
         // 比较完成后，右链表回到开始处
-        right = pre.next;
-        //
-        pre.next = null;
-        // 还原链表
+        right = pre;
+        pre = null;
+        // 再次反转右链表
         while (right != null) {
-             left = right.next;
+             next = right.next;
              right.next = pre;
              pre = right;
-             right = left;
+             right = next;
         }
         return result;
     }
