@@ -1,4 +1,4 @@
-package 剑指offer._28;
+package 剑指offer._28_数组超过一半的数字;
 
 import java.util.Arrays;
 
@@ -15,8 +15,8 @@ import java.util.Arrays;
 public class Num28 {
 
     public static void main(String[] args) {
-        int[] array = {2,2,2,2,3,4,5,6,7};
-        int num = search(array);
+        int[] array = {2, 4, 2, 6, 7, 2, 2};
+        int num = MoreThanHalfNum_Solution2(array);
         System.out.println(num);
     }
 
@@ -33,13 +33,13 @@ public class Num28 {
                 num++;
             }
         }
-        return num > mid ? array[mid-1] : 0;
+        return num > mid ? array[mid - 1] : 0;
     }
 
     // 找出第一个数字，下一个相同则+1，否则-1
     // 找到剩余到最后的数字，然后再对该数组进行查找
     // 如果是大于一半长度的数字，再怎么减，都不用怕等于0
-    public static int search(int[] array) {
+    public static int MoreThanHalfNum_Solution2(int[] array) {
         int num = array[0];
         int count = 1;
         for (int i = 1; i < array.length; i++) {
@@ -59,7 +59,7 @@ public class Num28 {
                 count++;
             }
         }
-        return count > array.length >> 1? num:0;
+        return count > array.length >> 1 ? num : 0;
     }
 
 }

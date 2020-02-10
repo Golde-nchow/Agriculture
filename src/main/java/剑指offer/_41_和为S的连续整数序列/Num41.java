@@ -36,8 +36,7 @@ public class Num41 {
         int cursum = high + low;
         // high > low 无可厚非
         // low < (sum+1 的一半)，因为 【sum+1 的一半 + 下一个元素】就超过了总大小
-        // 为什么要 sum + 1 的一半，因为比如 101，可以是50+51, 如果在 sum / 2, 那么就是 < 50, 但是 low==50 是允许的
-        while (high > low && low < (sum + 1) >> 1) {
+        while (high > low && low <= sum >> 1){
             if (cursum == sum) {
                 ArrayList<Integer> list = new ArrayList<>();
                 for (int i = low; i <= high; i++) {

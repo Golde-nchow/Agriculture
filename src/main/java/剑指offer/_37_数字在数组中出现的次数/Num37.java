@@ -52,7 +52,9 @@ public class Num37 {
                 high = mid - 1;
             }
             else {
+                // 如果想点呢个，那么-1看看前面是否还有相同的值
                 mid -= 1;
+                // mid < low 说明low的下标是0
                 if (mid < low || array[mid] != k) {
                     return mid + 1;
                 } else {
@@ -77,6 +79,7 @@ public class Num37 {
             else {
                 // 二分查找 k ，找到后，再右慢慢移动，找到非k后，返回mid - 1
                 mid += 1;
+                // mid > high 说明 high 的下标是 array.length - 1
                 if (mid > high || array[mid] != k) {
                     return mid - 1;
                 } else {

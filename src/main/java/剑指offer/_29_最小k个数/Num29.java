@@ -1,4 +1,4 @@
-package 剑指offer._29_数组超过一半的数字;
+package 剑指offer._29_最小k个数;
 
 import java.util.ArrayList;
 

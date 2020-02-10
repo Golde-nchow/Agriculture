@@ -11,7 +11,7 @@ package 剑指offer._08_变态跳台阶;
 public class NumEgiht {
 
     public static void main(String[] args) {
-        System.out.println(jumpFloorII2(1));
+        System.out.println(jumpFloorII(3));
     }
 
     /**
@@ -45,8 +45,8 @@ public class NumEgiht {
     }
 
     public static int jumpFloorII2(int target) {
-        if(target == 1 || target == 0) {
-            return 1;
+        if(target <= 2) {
+            return target;
         }
         return 2 * jumpFloorII2(target - 1);
     }

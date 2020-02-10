@@ -51,21 +51,15 @@ public class Num15 {
             }
             result = result.next;
         }
-
-        while (list1 != null) {
+        if (list1 != null) {
             result.next = list1;
-            list1 = list1.next;
-            result = result.next;
         }
 
-        while (list2 != null) {
+        if (list2 != null) {
             result.next = list2;
-            list2 = list2.next;
-            result = result.next;
         }
 
         return first.next;
-
     }
 
     /**

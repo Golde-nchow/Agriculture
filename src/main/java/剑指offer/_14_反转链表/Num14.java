@@ -3,6 +3,7 @@ package 剑指offer._14_反转链表;
 /**
  * 2019/10/14 :
  * 反转链表
+ *
  * @author User : Golden_chow
  */
 @SuppressWarnings("all")
@@ -33,13 +34,11 @@ public class Num14 {
      */
     public static ListNode ReverseList(ListNode head) {
         ListNode pre = null;
-        ListNode p = head;
-
         while (head != null) {
-            p = head.next;
+            ListNode temp = head.next;
             head.next = pre;
             pre = head;
-            head = p;
+            head = temp;
         }
         return pre;
     }

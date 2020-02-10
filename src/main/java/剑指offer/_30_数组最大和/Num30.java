@@ -1,4 +1,4 @@
-package 剑指offer._30_最小k个数;
+package 剑指offer._30_数组最大和;
 
 /**
  * 2019/10/24 :

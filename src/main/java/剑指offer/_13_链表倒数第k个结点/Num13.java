@@ -53,6 +53,10 @@ public class Num13 {
         ListNode slow = head;
         ListNode fast = head;
         while (k-- > 0) {
+            // 这里为了避免k大于链表的长度.
+            if (fast == null) {
+                return null;
+            }
             fast = fast.next;
         }
         while (fast != null) {

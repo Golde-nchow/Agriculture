@@ -18,7 +18,7 @@ public class NumNine {
      * 都是跳台阶的问题，简单
      */
     public static int RectCover(int target) {
-        if (target <= 2) {
+        if (target <= 3) {
             return target;
         }
         return RectCover(target - 1) + RectCover(target - 2);
